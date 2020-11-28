@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-wineitem',
+  selector: 'app-products-main',
   templateUrl: './wineitem.component.html',
   styleUrls: ['./wineitem.component.sass']
 })
