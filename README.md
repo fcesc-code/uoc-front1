@@ -18,6 +18,7 @@ Typescript
 JSON
 sass
 git
+sonarqube
 
 ## Credits
 Json data has been extended and adapted from https://github.com/hollyschinsky/angular-cellar-basic/blob/master/wines/wines.json
