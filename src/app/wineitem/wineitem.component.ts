@@ -34,8 +34,6 @@ export class WineitemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.wine;
-    this.food;
   }
 
   increaseAmount(): void {

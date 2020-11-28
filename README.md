@@ -20,6 +20,11 @@ sass
 git
 sonarqube
 
+## Quality gate
+Karma tests passed
+Sonarqube 0 bugs 0 code smells 0 vulnerabilities 0 security hotspots 0% code duplication 
+[there is only one bug of the test.ts karma default file created by Angular CLI]
+
 ## Credits
 Json data has been extended and adapted from https://github.com/hollyschinsky/angular-cellar-basic/blob/master/wines/wines.json
 
