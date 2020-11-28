@@ -28,10 +28,16 @@ export class WineitemComponent implements OnInit {
     this.wineRegion = 'Lombardy';
     this.wineDescription = 'A taste from roman gods.';
     this.winePrice = 20.50;
-    this.wineImageUrl = 'wine_example.png';
+    this.wineImageUrl = './assets/wine_example.png';
     this.wineIsOnSale = true;
     this.wineQuantityInChart = 0;
   }
 
+  increaseAmount(): void {
+    this.wineQuantityInChart++;
+  }
+  decreaseAmount(): void {
+    if (this.wineQuantityInChart !== 0) this.wineQuantityInChart--;
+  }
 
 }
