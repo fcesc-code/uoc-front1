@@ -1,26 +1,35 @@
 .wine__card
-  border: 1px solid #444444
+  border: 1px solid #bbbbbb
   border-radius: .5rem
-  color: red
+  color: #444444
   margin: .5rem auto
-  padding: .5rem 1.5rem
+  padding: 1.5rem 1.5rem
   width: 20%
   display: flex
   flex-direction: column
   justify-content: flex-start
   align-items: center
 
-  & > p
-    margin: 0.25rem
+
+  & > h2
+    letter-spacing: 1.1px
 
 .wine__card--notOnSale
   background-color: #666666
 
 .wine__origin
+  font-style: italic
   & > p
     margin: 0
 
 .wine__price
+  font-weight: bold
+  font-size: 1.25rem
+
+  & p
+    margin: 0 0 1rem 0
+
+.wine__quantity
   display: flex
   flex-direction: row
   justify-content: center
