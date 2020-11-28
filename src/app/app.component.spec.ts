@@ -22,10 +22,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('vinoteca');
   });
 
-  it('should render title', () => {
+  it('should contain app-header, app-products-main and app-footer', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('vinoteca app is running!');
+    expect(compiled.querySelector('app-header')).toBeTruthy();
+    expect(compiled.querySelector('app-products-main')).toBeTruthy();
+    expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
 });
