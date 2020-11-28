@@ -12,4 +12,12 @@ export class WineitemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  wineTitle: string = 'Example Wine';
+  wineYear: number = 2009;
+  wineGrapes: string = 'Merlot';
+  wineCountry: string = 'Italy';
+  wineRegion: string = 'Lombardy';
+  wineDescription: string = 'A taste from roman gods.';
+  winePrice: number = 20.50;
+
 }
