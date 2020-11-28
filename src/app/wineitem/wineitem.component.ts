@@ -7,18 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WineitemComponent implements OnInit {
 
+  public wineTitle: string = '';
+  public wineYear: number = 0;
+  public wineGrapes: string = '';
+  public wineCountry: string = '';
+  public wineRegion: string = '';
+  public wineDescription: string = '';
+  public winePrice: number = 0;
+  public wineImageUrl: string = '';
+  public wineIsOnSale: boolean = true;
+  public wineQuantityInChart: number = 0;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.wineTitle = 'Example Wine';
+    this.wineYear = 2009;
+    this.wineGrapes = 'Merlot';
+    this.wineCountry = 'Italy';
+    this.wineRegion = 'Lombardy';
+    this.wineDescription = 'A taste from roman gods.';
+    this.winePrice = 20.50;
+    this.wineImageUrl = 'wine_example.png';
+    this.wineIsOnSale = true;
+    this.wineQuantityInChart = 0;
   }
 
-  wineTitle: string = 'Example Wine';
-  wineYear: number = 2009;
-  wineGrapes: string = 'Merlot';
-  wineCountry: string = 'Italy';
-  wineRegion: string = 'Lombardy';
-  wineDescription: string = 'A taste from roman gods.';
-  winePrice: number = 20.50;
-  wineImage: string = 'wine_example.png';
 
 }

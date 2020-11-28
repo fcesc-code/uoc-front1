@@ -29,7 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "mockdata"
+              "src/mockdata"
             ],
             "styles": [
               "src/styles.sass"
