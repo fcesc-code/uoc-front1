@@ -10,7 +10,7 @@
     <p>{{winePrice | currency:'EUR':'symbol':'1.2-2' }}</p>
   </div>
   <div class="wine__quantity">
-    <button (click)="decreaseAmount()" [disabled]='wineQuantityInChart === 0 ? true : false'>-</button>
+    <button (click)="decreaseAmount()" [disabled]='wineQuantityInChart === 0'>-</button>
     <p>{{wineQuantityInChart}}</p>
     <button (click)="increaseAmount()">+</button>
   </div>
