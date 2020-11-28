@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IWineItem, IFoodItem } from './items.interfaces';
 
 @Component({
   selector: 'app-products-main',
@@ -7,37 +8,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WineitemComponent implements OnInit {
 
-  public wineTitle: string = '';
-  public wineYear: number = 0;
-  public wineGrapes: string = '';
-  public wineCountry: string = '';
-  public wineRegion: string = '';
-  public wineDescription: string = '';
-  public winePrice: number = 0;
-  public wineImageUrl: string = '';
-  public wineIsOnSale: boolean = true;
-  public wineQuantityInChart: number = 0;
+  wineSingleMockData = {
+    title : 'Example Wine',
+    year : 2009,
+    grapes : 'Merlot',
+    country : 'Italy',
+    region : 'Lombardy',
+    description : 'A taste from roman gods.',
+    price : 20.50,
+    imageUrl : './assets/wine_example.png',
+    isOnSale : true,
+    quantityInChart : 0
+  };
+
+  foodSingleMockData = {
+    name: 'Manchego cheese',
+    kcal: 320,
+    vegan: false,
+    gluten: false
+  }
+
+  public wine: IWineItem = this.wineSingleMockData;
+  public food: IFoodItem = this.foodSingleMockData;
 
   constructor() { }
 
   ngOnInit() {
-    this.wineTitle = 'Example Wine';
-    this.wineYear = 2009;
-    this.wineGrapes = 'Merlot';
-    this.wineCountry = 'Italy';
-    this.wineRegion = 'Lombardy';
-    this.wineDescription = 'A taste from roman gods.';
-    this.winePrice = 20.50;
-    this.wineImageUrl = './assets/wine_example.png';
-    this.wineIsOnSale = true;
-    this.wineQuantityInChart = 0;
+    this.wine;
+    this.food;
   }
 
   increaseAmount(): void {
-    this.wineQuantityInChart++;
+    this.wine.quantityInChart++;
   }
   decreaseAmount(): void {
-    if (this.wineQuantityInChart !== 0) this.wineQuantityInChart--;
+    if (this.wine.quantityInChart !== 0) this.wine.quantityInChart--;
   }
 
 }
