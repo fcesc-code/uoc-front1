@@ -19,5 +19,6 @@ export class WineitemComponent implements OnInit {
   wineRegion: string = 'Lombardy';
   wineDescription: string = 'A taste from roman gods.';
   winePrice: number = 20.50;
+  wineImage: string = 'wine_example.png';
 
 }
