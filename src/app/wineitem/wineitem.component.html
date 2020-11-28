@@ -1,10 +1,9 @@
 <div class="{{wineIsOnSale ? '' : 'wine__notOnSale'}} wine__card">
-  <h2>{{wineTitle}}</h2>
+  <h2>{{wineTitle | uppercase}}</h2>
   <img src="{{wineImageUrl}}" alt=""/>
   <p>{{wineYear}} - {{wineGrapes}}</p>
-  <div>
-    <p>{{wineCountry}}</p>
-    <p>{{wineRegion}}</p>
+  <div class="wine__origin">
+    <p>{{wineCountry}} - {{wineRegion}}</p>
   </div>
   <p>{{wineDescription}}</p>
   <p>{{winePrice | currency:'EUR':'symbol':'1.2-2' }}</p>
