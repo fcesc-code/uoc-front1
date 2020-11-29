@@ -1,4 +1,4 @@
-<div class="{{wine.isOnSale ? '' : 'wine__card--notOnSale'}} wine__card">
+<div [ngClass]="currentClasses()">
   <img src="{{wine.imageUrl}}" alt="" class="wine__image"/>
   <h2>{{wine.title | uppercase}}</h2>
   <div *ngIf='!wine.isOnSale' class="wine__notOnSale">
@@ -17,8 +17,11 @@
     <p>{{wine.price | currency:'EUR':'symbol':'1.2-2' }}</p>
   </div>
   <div class="wine__quantity">
-    <button (click)="decreaseAmount()" [disabled]='wine.quantityInChart === 0 || wine.isOnSale === false'>-</button>
-    <p>{{wine.quantityInChart}}</p>
-    <button (click)="increaseAmount()" [disabled]='wine.isOnSale === false'>+</button>
+    <button (click)="decreaseAmount()" *ngIf='wine.isOnSale && wine.quantityInChart !== 0'>-</button>
+    <select [(ngModel)]='wine.quantityInChart'>
+      <option *ngFor='let item of [].constructor(21); let i = index'>{{i}}</option>
+    </select>
+    <input [(ngModel)]='wine.quantityInChart' />
+    <button (click)="increaseAmount()" *ngIf='wine.isOnSale'>+</button>
   </div>
 </div>
