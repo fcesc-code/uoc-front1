@@ -18,7 +18,10 @@
   </div>
   <div class="wine__quantity">
     <button (click)="decreaseAmount()" *ngIf='wine.isOnSale && wine.quantityInChart !== 0'>-</button>
-    <p>{{wine.quantityInChart}}</p>
+    <select [(ngModel)]='wine.quantityInChart'>
+      <option *ngFor='let item of [].constructor(21); let i = index'>{{i}}</option>
+    </select>
+    <input [(ngModel)]='wine.quantityInChart' />
     <button (click)="increaseAmount()" *ngIf='wine.isOnSale'>+</button>
   </div>
 </div>
