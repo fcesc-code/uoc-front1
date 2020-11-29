@@ -42,5 +42,10 @@ export class WineitemComponent implements OnInit {
   decreaseAmount(): void {
     if (this.wine.quantityInChart !== 0) this.wine.quantityInChart--;
   }
+  currentClasses(): string[] {
+    let classesArray: string[] = ['wine__card'];
+    if (!this.wine.isOnSale) classesArray.push('wine__card--notOnSale');
+    return classesArray;
+  }
 
 }

@@ -1,4 +1,4 @@
-<div class="{{wine.isOnSale ? '' : 'wine__card--notOnSale'}} wine__card">
+<div [ngClass]="currentClasses()">
   <img src="{{wine.imageUrl}}" alt="" class="wine__image"/>
   <h2>{{wine.title | uppercase}}</h2>
   <div *ngIf='!wine.isOnSale' class="wine__notOnSale">
