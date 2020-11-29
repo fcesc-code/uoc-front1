@@ -17,8 +17,8 @@
     <p>{{wine.price | currency:'EUR':'symbol':'1.2-2' }}</p>
   </div>
   <div class="wine__quantity">
-    <button (click)="decreaseAmount()" [disabled]='wine.quantityInChart === 0 || wine.isOnSale === false'>-</button>
+    <button (click)="decreaseAmount()" *ngIf='wine.isOnSale && wine.quantityInChart !== 0'>-</button>
     <p>{{wine.quantityInChart}}</p>
-    <button (click)="increaseAmount()" [disabled]='wine.isOnSale === false'>+</button>
+    <button (click)="increaseAmount()" *ngIf='wine.isOnSale'>+</button>
   </div>
 </div>
